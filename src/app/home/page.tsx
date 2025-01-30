@@ -20,7 +20,7 @@ export default async function Home() {
 
   return (
     <div>
-      <div className="flex flex-col gap-4 w-full md:mx-auto md:w-1/2 mx-auto">
+      <div className="flex flex-col gap-4 w-full md:ms-auto md:w-3/5 mx-auto">
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-bold" >Latest Snippets</h1>
           <Link href={'/snippets/new'} >

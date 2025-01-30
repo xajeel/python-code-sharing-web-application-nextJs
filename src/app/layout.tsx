@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import NavbarResponsive from "@/components/NavbarResponsive";
 import { Poppins } from "next/font/google";
+import { ClerkProvider } from '@clerk/nextjs'
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -40,6 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ClerkProvider>
     <html lang="en">
       <body
         className={`${poppins.variable} antialiased bg-white text-gray-800`}
@@ -53,5 +55,6 @@ export default function RootLayout({
         </div>
       </body>
     </html>
+    </ClerkProvider>
   );
 }
