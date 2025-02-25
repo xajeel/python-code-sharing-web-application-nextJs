@@ -1,10 +1,8 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 import os
 
-os.environ["GOOGLE_API_KEY"] = "AIzaSyA23p9UO4vwuzXJRo92phCYSZ7YV_zO8x4"
-
 def get_explantion(code):
-      llm = ChatGoogleGenerativeAI(
+      llm = ChatGoogleGenerativesAI(
       model="gemini-2.0-flash",
       temperature=0.4,
       max_retries=2,)

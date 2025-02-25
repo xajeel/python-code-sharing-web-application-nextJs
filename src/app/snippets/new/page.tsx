@@ -8,7 +8,6 @@ import Button from '@/components/Button';
 import { useActionState } from 'react';
 
 
-
 const CreateNewSnippet = () => {
 
     const [formState, action] = useActionState(submitSnippet, {message: ""});
