@@ -1,0 +1,4 @@
+langchain_community
+pygments
+langchain-google-genai
+python-dotenv
