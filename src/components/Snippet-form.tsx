@@ -17,7 +17,7 @@ const SnippetEditForm = (props: any) => {
 
   return (
 
-    <div className="w-full md:w-1/2 mx-auto" >
+    <div className="w-full md:w-3/5 mx-auto" >
       <div>
         <h1 className=" text-2xl font-bold text-left">Edit Snippet</h1>
       </div>

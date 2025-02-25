@@ -7,7 +7,7 @@ const Banner = () => {
       <div className="mx-auto max-w-xl text-center">
         <h1 className="text-3xl font-extrabold sm:text-5xl">
         Discover & Contribute
-          <strong className="font-extrabold text-teal-700 sm:block"> Write. Share. Improve. </strong>
+          <strong className="font-extrabold text-[#875bf9] sm:block"> Write. Share. Improve. </strong>
         </h1>
   
         <p className="mt-4 sm:text-xl/relaxed">
@@ -16,14 +16,14 @@ const Banner = () => {
   
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
-            className="block w-full rounded bg-teal-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto"
+            className="block w-full rounded bg-[#875bf9] px-12 py-3 text-sm font-medium text-white shadow hover:bg-[#874bf9] focus:outline-none focus:ring active:bg-[#876bf9] sm:w-auto"
             href="/home"
           >
             Get Started
           </a>
   
           <a
-            className="block w-full rounded px-12 py-3 text-sm font-medium text-teal-600 shadow hover:text-teal-700 focus:outline-none focus:ring active:text-teal-500 sm:w-auto"
+            className="block w-full rounded px-12 py-3 text-sm font-medium text-[#875bf9] shadow hover:text-[#874bf9] focus:outline-none focus:ring active:text-teal-500 sm:w-auto"
             href="#"
           >
             Learn More

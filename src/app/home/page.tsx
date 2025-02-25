@@ -9,7 +9,7 @@ export default async function Home() {
   const titles = data.map((snippet) => {
     return <Link
       href={`/snippets/${snippet.id}`}
-      className="flex justify-between bg-gray-50 border rounded p-3 my-2"
+      className="flex justify-between bg-gray-50 border rounded p-3 my-2 shadow-sm"
       key={snippet.id}>
       <div>
         {snippet.title}
