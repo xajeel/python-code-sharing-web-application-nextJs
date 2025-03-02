@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { FaHome } from "react-icons/fa";
+
 
 const NavbarResponsive = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,10 +24,11 @@ const NavbarResponsive = () => {
         <div className="flex flex-1 items-center justify-end md:justify-between">
           <nav aria-label="Global" className={`absolute md:static bg-white md:bg-transparent w-full md:w-auto left-0 top-16 p-4 md:p-0 shadow-md md:shadow-none ${isMenuOpen ? "block" : "hidden"} md:block`}>
             <ul className="flex flex-col md:flex-row items-start md:items-center gap-6 text-sm">
-              <li><Link className="text-gray-500 hover:text-gray-500/75 hover:scale-105 hover:shadow-sm transition-all" href="/">Home</Link></li>
-              <li><Link className="text-gray-500 hover:scale-105 hover:shadow-sm transition-all hover:text-gray-500/75" href="/home">Snippets</Link></li>
-              <li><Link className="text-gray-500 hover:scale-105 hover:shadow-sm transition-all hover:text-gray-500/75" href="/contact">Contact Us</Link></li>
-              <li><Link className="text-gray-500 hover:scale-105 hover:shadow-sm transition-all hover:text-gray-500/75" href="#">About</Link></li>
+              <li><Link className="text-gray-500 hover:text-gray-500/75 transition flex gap-2 items-center" href="/"><FaHome />
+            Home</Link></li>
+              <li><Link className="text-gray-500 transition hover:text-gray-500/75" href="/home">Snippets</Link></li>
+              <li><Link className="text-gray-500 transition hover:text-gray-500/75" href="/contact">Contact Us</Link></li>
+              <li><Link className="text-gray-500 transition hover:text-gray-500/75" href="/about">About</Link></li>
             </ul>
           </nav>
 
@@ -34,7 +37,7 @@ const NavbarResponsive = () => {
             
               
               <SignedOut >
-              <div className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700">
+              <div className="rounded-md bg-[#875bf9] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#874bf9]">
                 <SignInButton />
                 </div>
               </SignedOut>

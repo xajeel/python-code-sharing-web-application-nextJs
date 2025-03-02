@@ -1,6 +1,7 @@
+import { ReactNode } from "react";
 
 interface ButtonProps {
-    name: string;
+    name: ReactNode;
 }
 
 const Button = (props: ButtonProps) => {

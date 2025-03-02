@@ -24,9 +24,9 @@ const Banner = () => {
   
           <a
             className="block w-full rounded px-12 py-3 text-sm font-medium text-[#875bf9] shadow hover:text-[#874bf9] focus:outline-none focus:ring active:text-teal-500 sm:w-auto"
-            href="#"
+            href="/about"
           >
-            Learn More
+            About Us
           </a>
         </div>
       </div>
