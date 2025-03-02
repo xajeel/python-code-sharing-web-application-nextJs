@@ -21,6 +21,18 @@ async function submitSnippet(formState: {message:string}, formData: FormData){
         return { message: 'Code must be Longer' }
     }
 
+    const response = await fetch( "http://localhost:5000/api/check", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ code }),
+    })
+
+    const data = await response.json();
+
+    if (data.valid === true){
+
     // Creating a new snippet
     const snippets = await db.snippet.create({
         data: {
@@ -30,6 +42,10 @@ async function submitSnippet(formState: {message:string}, formData: FormData){
     });
     // Redirecting to the Home Page 
     redirect('/home');
+} else {
+    return { message: 'Invalid python Code' }
+}
+
 }
 
 export { submitSnippet };

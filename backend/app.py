@@ -15,7 +15,7 @@ def read_root():
 
 @app.post("/api/check")
 def check_code(request: Item):
-    return {is_python_code(request.code)}
+    return {"valid": is_python_code(request.code)}
 
 @app.post("/api/explain")
 def explain_code(request: Item):

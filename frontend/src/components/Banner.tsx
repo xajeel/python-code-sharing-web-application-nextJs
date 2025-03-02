@@ -16,7 +16,7 @@ const Banner = () => {
   
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
-            className="block w-full rounded bg-[#875bf9] px-12 py-3 text-sm font-medium text-white shadow hover:bg-[#874bf9] focus:outline-none focus:ring active:bg-[#876bf9] sm:w-auto"
+            className="block w-full rounded bg-[#875bf9] px-12 py-3 text-sm font-medium text-white shadow hover:bg-[#874bf9] hover:scale-105 transition-all focus:outline-none focus:ring active:bg-[#876bf9] sm:w-auto"
             href="/home"
           >
             Get Started

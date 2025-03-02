@@ -8,7 +8,7 @@ const NavbarResponsive = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-sm ">
+    <header className="bg-white shadow-sm sticky">
       <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
         <a className="block text-teal-600" href="/">
           <span className="sr-only">Home</span>
@@ -22,16 +22,16 @@ const NavbarResponsive = () => {
         <div className="flex flex-1 items-center justify-end md:justify-between">
           <nav aria-label="Global" className={`absolute md:static bg-white md:bg-transparent w-full md:w-auto left-0 top-16 p-4 md:p-0 shadow-md md:shadow-none ${isMenuOpen ? "block" : "hidden"} md:block`}>
             <ul className="flex flex-col md:flex-row items-start md:items-center gap-6 text-sm">
-              <li><Link className="text-gray-500 transition hover:text-gray-500/75" href="/">Home</Link></li>
-              <li><Link className="text-gray-500 transition hover:text-gray-500/75" href="/home">Snippets</Link></li>
-              <li><Link className="text-gray-500 transition hover:text-gray-500/75" href="/contact">Contact Us</Link></li>
-              <li><Link className="text-gray-500 transition hover:text-gray-500/75" href="#">About</Link></li>
+              <li><Link className="text-gray-500 hover:text-gray-500/75 hover:scale-105 hover:shadow-sm transition-all" href="/">Home</Link></li>
+              <li><Link className="text-gray-500 hover:scale-105 hover:shadow-sm transition-all hover:text-gray-500/75" href="/home">Snippets</Link></li>
+              <li><Link className="text-gray-500 hover:scale-105 hover:shadow-sm transition-all hover:text-gray-500/75" href="/contact">Contact Us</Link></li>
+              <li><Link className="text-gray-500 hover:scale-105 hover:shadow-sm transition-all hover:text-gray-500/75" href="#">About</Link></li>
             </ul>
           </nav>
 
           <div className="flex items-center gap-4">
             <div className="sm:flex sm:gap-4">
-              {/* <Link className="block rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700" href="/snippets/new">New</Link> */}
+            
               
               <SignedOut >
               <div className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700">
