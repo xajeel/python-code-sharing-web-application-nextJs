@@ -5,15 +5,25 @@ import { Editor } from "@monaco-editor/react"
 import { useState } from "react";
 import Button from "./Button";
 
-const SnippetEditForm = (props: any) => {
+interface Snippet {
+  id: number; // Assuming ID is a number, update it if it's a string
+  title: string;
+  code: string;
+}
 
-  const [code, setCode] = useState(props.snippet.code)
+interface SnippetEditFormProps {
+  snippet: Snippet;
+}
+
+const SnippetEditForm = ({ snippet }: SnippetEditFormProps) => {
+
+  const [code, setCode] = useState(snippet.code)
 
   const handleEditorChange = (value: string = '') => {
     setCode(value)
   }
 
-  const editSnippet = updateValue.bind(null, props.snippet.id, code)
+  const editSnippet = updateValue.bind(null, snippet.id, code)
 
   return (
 
@@ -24,13 +34,13 @@ const SnippetEditForm = (props: any) => {
 
       <div className="flex flex-col items-center justify-center mx-auto mt-5 bg-gray-50 px-4 py-4 border rounded">
       <div className="w-full">
-        <h1 className=" text-xl font-bold text-left mb-4">Title: {props.snippet.title}</h1>
+        <h1 className=" text-xl font-bold text-left mb-4">Title: {snippet.title}</h1>
       </div>
         <div className="w-full">
           <Editor
             height="30vh"
             defaultLanguage="python"
-            defaultValue={props.snippet.code}
+            defaultValue={snippet.code}
             onChange={handleEditorChange}
             options={{
               minimap: { enabled: false },

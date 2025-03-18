@@ -1,5 +1,4 @@
 import { deletevalue } from "@/actions";
-import Button from "@/components/Button";
 import Explainer from "@/components/Explain";
 import ShowSnippet from "@/components/Showsnippet";
 import { db } from "@/db/cleint";
@@ -8,13 +7,16 @@ import { notFound } from "next/navigation";
 
 
 interface SnippetsProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 export default async function editSnippets({ params }: SnippetsProps) {
+
+  const resolvedParams = await params;
+
   const data = await db.snippet.findUnique({
     where: {
-      id: parseInt(params.id),
+      id: Number(resolvedParams.id),
     },
   });
 

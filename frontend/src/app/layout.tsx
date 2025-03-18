@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Inter, Fira_Code } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 import NavbarResponsive from "@/components/NavbarResponsive";
 import { Poppins } from "next/font/google";
 import { ClerkProvider } from '@clerk/nextjs'
@@ -15,20 +14,20 @@ const poppins = Poppins({
 
 
 // Define font styles
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const firaCode = Fira_Code({ subsets: ["latin"], variable: "--font-fira-code" });
+// const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+// const firaCode = Fira_Code({ subsets: ["latin"], variable: "--font-fira-code" });
 
 
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   title: "PySnipper",

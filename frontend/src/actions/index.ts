@@ -2,6 +2,7 @@
 
 import { db } from "@/db/cleint"
 import { redirect } from 'next/navigation'
+import { revalidatePath } from "next/cache";
 
 // New Snippet Form 
 
@@ -41,6 +42,7 @@ async function submitSnippet(formState: {message:string}, formData: FormData){
         },
     });
     // Redirecting to the Home Page 
+    revalidatePath('/home');
     redirect('/home');
 } else {
     return { message: 'Invalid python Code' }
@@ -74,6 +76,7 @@ const deletevalue = async (id:number) => {
         }
     })
 
+    revalidatePath('/home');
     redirect('/home')
 }
 
